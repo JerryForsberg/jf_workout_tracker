@@ -3,32 +3,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ExerciseSchema = new Schema({
-    
-    name: {
-        type: String,
-        trim: true,
-        required: true
-
-    },
-    weight: {
-        type: Number,
-        required: "Enter an amount"
-    },
-    sets: {
-        type: Number
-
-    },
-    reps: {
-        type: Number
-    },
-    duration: {
-        type: Number
-    },
-    distance: {
-        type: Number
-    }
+    type: String,
+    name: String,
+    weight: Number,
+    sets: Number,
+    reps: Number,
+    duration: Number,
+    distance: Number,
 });
 
 const Exercise = mongoose.model("Exercise", ExerciseSchema);
 
 module.exports = Exercise;
+
+//mongoose virtual to add workout times -- hardcode to test is virtual is wworking in the front end
